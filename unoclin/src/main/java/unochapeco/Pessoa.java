@@ -1,5 +1,6 @@
 package unochapeco;
-
+import java.util.Scanner;
+import java.util.Random;
 public abstract class Pessoa {
     //-----atributos
     private int id;
@@ -8,7 +9,10 @@ public abstract class Pessoa {
     private String telefone;
     private String email;
     private String endereco;
-
+    //---------scanner e o gerador de ids (random)
+    Scanner lerInt = new Scanner(System.in);
+    Scanner lerString = new Scanner(System.in);
+    Random gerador = new Random();
     //-----sets e gets
     public int getId() {
         return id;
@@ -47,13 +51,47 @@ public abstract class Pessoa {
         this.endereco = endereco;
     }
     //---------- construtor
-    public Pessoa(int id, String nome, int cpf, String telefone, String email, String endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.email = email;
-        this.endereco = endereco;
+    public Pessoa() {
+
     }
+
+
+    public void setDados (){
+        System.out.print("Digite o nome da pessoa: ");
+        this.setNome(lerString.nextLine());
+        System.out.print("Digite o E-mail de contato da pessoa: ");
+        this.setEmail(lerString.nextLine());
+        System.out.print("Digite o Endereço da pessoa: ");
+        this.setEndereco(lerString.nextLine());
+        System.out.print("Digite o Numero de telefone para contato da pessoa: ");
+        this.setTelefone(lerString.nextLine());
+        System.out.print("Digite o Numero de CPF/RG da pessoa: ");
+        try {
+            this.setCpf(lerInt.nextInt());
+        } catch (Exception e) {
+            System.out.println("Erro, utilizou string (texto) em lugar de int (numeros)");
+            throw new RuntimeException(e);
+        }
+        this.setId(1 + gerador.nextInt(100));
+     }
+
+
+
+     public void mostrarDados(){
+        System.out.println("---Dados do Usuario---" + this.getNome());
+        System.out.println("Id do Usuario é " + this.getId());
+        System.out.println("Nome do Usuario é " + this.getNome());
+        System.out.println("Email de contato Usuario é " + this.getEmail());
+        System.out.println("Endereço do Usuario é " + this.getEndereco());
+        System.out.println("Numero de CPF/Rg do Usuario é " + this.getCpf());
+        System.out.println("Numero de telefone para contato do Usuario é " + this.getTelefone());
+
+
+
+
+     }
+
+
+
 
 }
