@@ -45,7 +45,7 @@ public class Profissional extends Pessoa{
         this.setEspecialidade(lerString.nextLine());
         System.out.print("Digite o Registro profissional (CRM, CRO, etc.)(Codigo que comprova que é um profissional qualificado para realizar o trabalho de médico): ");
         this.setRegistro_profissional(lerString.nextLine());
-        System.out.print("Horario disponivel para atentimento:  ");
+        System.out.println("Horario disponivel para atentimento:  ");
         do{
             int h, m;
             try {
@@ -71,7 +71,7 @@ public class Profissional extends Pessoa{
         System.out.println("Especialidade do profissional é " + this.getEspecialidade());
         System.out.println("Registro profissional (CRM, CRO, etc.) é " + this.getRegistro_profissional());
         System.out.print( "os horarios disponiveis são: " + horarios );
-        System.out.println("");
+
     }
 
 }

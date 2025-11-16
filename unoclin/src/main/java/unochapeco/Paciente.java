@@ -56,7 +56,7 @@ public class Paciente extends Pessoa{
         System.out.println("Sexo do paciente é " + this.getSexo());
         System.out.println("Historico medico do paciente " + this.getHistorico_medico());
         System.out.println("Data de nascimento (Ano / Mês / Dia) é  " + this.getDataNascimento());
-        System.out.println("");
+
     }
 
 

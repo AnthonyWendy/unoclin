@@ -78,8 +78,7 @@ public abstract class Pessoa {
 
 
      public void mostrarDados(){
-         System.out.println("---------------:" + this.getNome());
-        System.out.println("---Dados do Usuario:" + this.getNome());
+        System.out.println("Dados do Usuario: " + this.getNome());
         System.out.println("Id do Usuario é " + this.getId());
         System.out.println("Nome do Usuario é " + this.getNome());
         System.out.println("Email de contato Usuario é " + this.getEmail());

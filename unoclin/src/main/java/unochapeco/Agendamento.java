@@ -67,18 +67,19 @@ public class Agendamento {
         this.setObservacoes(lerString.nextLine());
         System.out.print("Digite o id do Paciente: ");
         idA = lerInt.nextInt();
-            for (Paciente i : Main.listaP) {  //explicação (ajuda da intermet pq eu nem lembrava que esta funçao existia
+            for (Paciente i : Main.listaP) {  //explicação (ajuda da internet pq eu nem lembrava que esta funçao existia
                 if (idA == i.getId()) {   // ele vai percorer o vetor listap, com isso ele vai criar uma variavel i paciente e vai
                     this.setPaciente(i); //colar valor dela o valor que ele percorreu no vetor, e depois ele compara se a id
-                    break;}  // é igual, se sim o paciente dessa clase se torna a variavel i (so funciona pois cada id é unico)
-        }
+                    break;  // é igual, se sim o paciente dessa clase se torna a variavel i (so funciona pois cada id é unico)
+                }else{System.out.println("Id não existe"); }
+            }
         System.out.print("Digite o id do Profissional: ");
         idA = lerInt.nextInt();
             for (Profissional i : Main.listaM) {
                 if (idA == i.getId()) {
                     this.setProfissional(i);
                     break;
-            }
+            }else{System.out.println("Id não existe"); }
         }
         int h, m;
         try {
@@ -105,15 +106,15 @@ public class Agendamento {
     }
 
     public void mostrarAgendamento(){
-        System.out.println("---------------------------------" );
-        System.out.println("Id do agentamento é" + this.getId() );
+        System.out.println("\n------lista de agendamentos-------" );
+        System.out.println("Id do agentamento é " + this.getId() );
         System.out.println("O paciente é " + this.getPaciente().getNome() );
         System.out.println("O profissional é " + this.getProfissional().getNome() );
         if(this.getStatus() == "Agendado") System.out.println("A consulta foi agentada para o horario de " + this.getHora());
-        if(this.getStatus() == "Cancelado ") System.out.println("Consulta cancelada pois o profissional não esta disponivel neste momento");
-        System.out.println("favor remarcar " );
+        if(this.getStatus() == "Cancelado ") System.out.println("Consulta cancelada pois o profissional não esta disponivel neste momento, favor remarcar");
         if(this.getStatus() == "Realizado") System.out.println("A consulta já foi realizada no horario das " + this.getHora());
-        System.out.println("");
+        System.out.println("Status do agendamento: " + this.getStatus());
+        System.out.println("---------------");
     }
 
     public void alterarHora(){
