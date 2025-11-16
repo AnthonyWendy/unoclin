@@ -38,8 +38,8 @@ public class Schedule implements EntityBase, Serializable {
     @NotNull(message = "error.schedule.start.invalid")
     private LocalDateTime start;
 
-    @NotNull(message = "error.schedule.end.invalid")
-    private LocalDateTime end;
+    @NotNull(message = "error.schedule.end_at.invalid")
+    private LocalDateTime endAt;
 
     @NotNull(message = "error.schedule.status.invalid")
     @Enumerated(EnumType.STRING)
