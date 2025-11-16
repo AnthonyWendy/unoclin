@@ -1,0 +1,22 @@
+INSERT INTO patient ("name", cpf, email, born_date, gender, address, phone_number)
+VALUES
+    ('Ana Silva', '111.111.111-11', 'ana.silva@email.com', '1990-01-15', 'F', 'Rua A, 123', 999100001),
+    ('Bruno Souza', '222.222.222-22', 'bruno.souza@email.com', '1985-05-20', 'M', 'Rua B, 45', 999100002),
+    ('Carla Lima', '333.333.333-33', 'carla.lima@email.com', '1992-03-10', 'F', 'Rua C, 78', 999100003),
+    ('Daniel Costa', '444.444.444-44', 'daniel.costa@email.com', '1988-07-25', 'M', 'Rua D, 90', 999100004),
+    ('Elisa Rocha', '555.555.555-55', 'elisa.rocha@email.com', '1995-12-05', 'F', 'Rua E, 11', 999100005),
+    ('Fernando Melo', '666.666.666-66', 'fernando.melo@email.com', '1980-11-30', 'M', 'Rua F, 22', 999100006),
+    ('Gabriela Pinto', '777.777.777-77', 'gabriela.pinto@email.com', '1998-08-18', 'F', 'Rua G, 33', 999100007),
+    ('Henrique Dias', '888.888.888-88', 'henrique.dias@email.com', '1983-02-14', 'M', 'Rua H, 44', 999100008),
+    ('Isabela Martins', '999.999.999-99', 'isabela.martins@email.com', '1991-09-09', 'F', 'Rua I, 55', 999100009),
+    ('João Alves', '101.101.101-10', 'joao.alves@email.com', '1986-06-06', 'M', 'Rua J, 66', 999100010),
+    ('Karina Farias', '121.121.121-12', 'karina.farias@email.com', '1993-04-12', 'F', 'Rua K, 77', 999100011),
+    ('Lucas Ribeiro', '131.131.131-13', 'lucas.ribeiro@email.com', '1987-01-21', 'M', 'Rua L, 88', 999100012),
+    ('Mariana Lopes', '141.141.141-14', 'mariana.lopes@email.com', '1996-07-30', 'F', 'Rua M, 99', 999100013),
+    ('Nicolas Silva', '151.151.151-15', 'nicolas.silva@email.com', '1984-10-10', 'M', 'Rua N, 100', 999100014),
+    ('Olívia Teixeira', '161.161.161-16', 'olivia.teixeira@email.com', '1990-05-22', 'F', 'Rua O, 101', 999100015),
+    ('Paulo Fernandes', '171.171.171-17', 'paulo.fernandes@email.com', '1982-12-01', 'M', 'Rua P, 102', 999100016),
+    ('Quésia Moura', '181.181.181-18', 'quesia.moura@email.com', '1994-03-03', 'F', 'Rua Q, 103', 999100017),
+    ('Rafael Gomes', '191.191.191-19', 'rafael.gomes@email.com', '1989-08-15', 'M', 'Rua R, 104', 999100018),
+    ('Sabrina Nunes', '201.201.201-20', 'sabrina.nunes@email.com', '1997-11-11', 'F', 'Rua S, 105', 999100019),
+    ('Thiago Cardoso', '211.211.211-21', 'thiago.cardoso@email.com', '1985-09-09', 'M', 'Rua T, 106', 999100020);
