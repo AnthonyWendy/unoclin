@@ -15,8 +15,9 @@ public class Main {
     //---------random
     static Random gerador = new Random();
     //---------------------vetor que quarda os pacientes
-    static ArrayList<Paciente> listaP = new ArrayList<>();  // lista de paciente
-    static ArrayList<Profissional> listaM = new ArrayList<>();  // lista m porque m de medico pois o p ja foi escolhido
+    public static ArrayList<Paciente> listaP = new ArrayList<>();  // lista de paciente
+    public static ArrayList<Profissional> listaM = new ArrayList<>();  // lista m porque m de medico pois o p ja foi escolhido
+    public static ArrayList<Agendamento> listaA = new ArrayList<>();
     //--------------Main
     static void main() {
         System.out.println("Seja bem vindo a um simples crud de uma clinica");
@@ -30,27 +31,29 @@ public class Main {
        //------------ switch case de escolhas no menu
                 switch(opcao){
                     case 1 -> {
-                    listaP.add(new Paciente());
-                    idControlP();
+                         listaP.add(new Paciente());
+                         idControlP();
 
                     }
 
                     case 2 -> {
-                    listaM.add(new Profissional());
-                    idControlM();
+                        listaM.add(new Profissional());
+                        idControlM();
                     }
 
                     case 3 -> {
                      for(int i = 0; i < listaP.size(); i++){
                          listaP.get(i).mostrarDados();
                          listaP.get(i).mostrarDadosP();}
+                         System.out.println("");
                     }
 
 
                     case 4 -> {
                      for(int i = 0; i < listaM.size(); i++){
-                            listaM.get(i).mostrarDados();
-                            listaM.get(i).mostrarDadosM();}
+                         listaM.get(i).mostrarDados();
+                         listaM.get(i).mostrarDadosM();}
+                         System.out.println("");
                     }
                     case 5-> {
                         int idA;
@@ -70,19 +73,48 @@ public class Main {
                         System.out.println("");
                     }
 
+                    case 7 -> {
+                       listaA.add(new Agendamento());
+                       idControlA();
+                       System.out.println(" ");
+                    }
+
+                    case 8 -> {
+                        for(int i = 0; i < listaA.size(); i++){
+                        listaA.get(i).mostrarAgendamento();
+                        System.out.println("");
+                    }}
+
+                    case 9-> {
+                        int idA;
+                        System.out.println("Digite o id do  Agentamento que sera removido");
+                        System.out.print("Id: ");
+                        idA = lerInt.nextInt();
+                        listaA.removeIf(listaA -> listaA.getId() == idA);
+                        System.out.println("");
+                    }
+
+                    case 10 -> {
+                        int idA;
+                        System.out.println("Digite o id do Agentamento que tera hora modificada");
+                        System.out.print("Id: ");
+                        idA = lerInt.nextInt();
+                        for(Agendamento i : listaA){
+                            if(idA == i.getId()){
+                                i.alterarHora();
+                                System.out.println("");
+                                break;}}
+                    }
 
 
 
-
-
-
-                    case 9 -> {
+                    case 12 -> {
                         System.out.println("\nobrigado por usar este programa =)");}
 
                     default -> {
                         System.out.println("\nEste numero não existe, por favor digite de novo");}
                 }
-             }while(getOpcao() != 9);
+             }while(getOpcao() != 12);
 
 
 
@@ -100,8 +132,12 @@ public class Main {
         System.out.println("4 - Mostrar todos os Profissionais");
         System.out.println("5 - Remover profissional");
         System.out.println("6 - Remover paciente");
+        System.out.println("7 - Arranjar agendamento");
+        System.out.println("8 - Mostrar Agentamentos ");
+        System.out.println("9 - Remover agentamento ");
+        System.out.println("10 - Alterar horario agentamento ");
 
-        System.out.println("9 - Sair do programa ");
+        System.out.println("12 - Sair do programa ");
         System.out.print("OPÇÃO: ");
     }
 
@@ -116,5 +152,11 @@ public class Main {
             for(int x = 0; x >= listaM.size(); x++ ){
                 if(listaM.get(i).getId() == listaM.get(x).getId()){
                     listaM.get(x).setId(x + 1 + gerador.nextInt(100 - x));}}}
+    }
+    public static void idControlA(){
+        for(int i = 0; i >= listaA.size(); i++ ){
+            for(int x = 0; x >= listaA.size(); x++ ){
+                if(listaA.get(i).getId() == listaA.get(x).getId()){
+                    listaA.get(x).setId(x + 1 + gerador.nextInt(100 - x));}}}
     }
 }

@@ -50,7 +50,7 @@ public class Paciente extends Pessoa{
 
         this.dataNascimento = LocalDate.of(ano,mes,dia);
 
-
+        System.out.println(" ");
     }
     public void mostrarDadosP(){
         System.out.println("Sexo do paciente é " + this.getSexo());
