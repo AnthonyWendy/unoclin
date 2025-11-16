@@ -1,17 +1,19 @@
-package com.uno.unoclin.service;
+package com.uno.unoclin.entity.service;
 
-import com.uno.unoclin.entity.domain.Entity;
+import com.uno.unoclin.entity.domain.EntityBase;
 import com.uno.unoclin.entity.repository.EntityRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public abstract class BaseService<T extends Entity> {
+
+public abstract class EntityBaseService<T extends EntityBase> {
 
     protected final EntityRepository<T> repository;
 
-    public BaseService(EntityRepository<T> repository) {
+    public EntityBaseService(EntityRepository<T> repository) {
         this.repository = repository;
     }
 

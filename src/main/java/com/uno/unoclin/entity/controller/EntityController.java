@@ -1,17 +1,17 @@
 package com.uno.unoclin.entity.controller;
 
-import com.uno.unoclin.entity.domain.Entity;
-import com.uno.unoclin.service.BaseService;
+import com.uno.unoclin.entity.domain.EntityBase;
+import com.uno.unoclin.entity.service.EntityBaseService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-public abstract class EntityController<T extends Entity> {
+public abstract class EntityController<T extends EntityBase> {
 
-    protected final BaseService<T> service;
+    protected final EntityBaseService<T> service;
 
-    public EntityController(BaseService<T> service) {
+    public EntityController(EntityBaseService<T> service) {
         this.service = service;
     }
 
