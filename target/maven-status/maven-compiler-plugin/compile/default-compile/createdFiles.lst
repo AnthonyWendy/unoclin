@@ -1,0 +1,9 @@
+com/uno/unoclin/entity/repository/EntityRepository.class
+com/uno/unoclin/patient/service/PatientService.class
+com/uno/unoclin/patient/domain/Patient.class
+com/uno/unoclin/entity/controller/EntityController.class
+com/uno/unoclin/entity/domain/EntityBase.class
+com/uno/unoclin/patient/repository/PatientRepository.class
+com/uno/unoclin/UnoclinApplication.class
+com/uno/unoclin/service/EntityBaseService.class
+com/uno/unoclin/patient/controller/PatientController.class

@@ -1,0 +1,9 @@
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/UnoclinApplication.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/entity/controller/EntityController.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/entity/domain/EntityBase.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/entity/repository/EntityRepository.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/entity/service/EntityBaseService.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/patient/controller/PatientController.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/patient/domain/Patient.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/patient/repository/PatientRepository.java
+/home/distopia/Documents/projects/ruim/unoclin/src/main/java/com/uno/unoclin/patient/service/PatientService.java
