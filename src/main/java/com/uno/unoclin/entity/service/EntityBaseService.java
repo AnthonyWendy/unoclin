@@ -19,6 +19,9 @@ public abstract class EntityBaseService<T extends EntityBase> {
 
     @Transactional
     public T save(T entity) {
+
+        beforeSave(entity);
+
         return repository.save(entity);
     }
 
@@ -51,5 +54,8 @@ public abstract class EntityBaseService<T extends EntityBase> {
 
     public List<T> findAll() {
         return repository.findAll();
+    }
+
+    public void beforeSave(T entity) {
     }
 }
